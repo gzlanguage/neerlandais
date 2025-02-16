@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate="no">G-Z</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Lichte achtergrondkleur */
+            color: var(--text-color);
+            font-family: 'Roboto', Arial, sans-serif; /* Gebruik een vergelijkbaar lettertype */
+            padding: 20px;
+            margin: 0;
+        }
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .header {
+            font-size: 1.8em;
+            font-family: 'Billabong', cursive;
+            color: #007BFF; /* Blauwe kleur */
+            border: 1.5px solid #007BFF; /* Blauwe rand */
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 10px; /* Afgeronde hoeken */
+        }
+        .divider {
+            height: 1px;
+            background-color: #007BFF; /* Randkleur */
+            width: 100%;
+            margin: 5px 0;
+        }
+        .short-divider {
+            width: 50%;
+            margin: 10px auto;
+        }
+        .content {
+            text-align: center;
+            margin-top: 60px;
+        }
+        h1, h2 {
+            margin-bottom: 5px;
+            font-size: 2em;
+            text-decoration: underline;
+            color: #007BFF; /* Blauwe kleur */
+        }
+        .social-message {
+            margin-top: 30px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Ruimte tussen de iconen */
+            margin-top: 20px;
+        }
+        .icon {
+            font-size: 30px; 
+            color: #007BFF; /* Blauwe kleur */
+            transition: color 0.3s;
+            border: 1px solid #007BFF; /* Blauwe rand */
+            border-radius: 3px;
+            padding: 8px; 
+            background-color: rgba(0, 119, 190, 0.1); /* Lichte achtergrond */
+            display: inline-block;
+        }
+        .icon:hover {
+            color: #005f8d; /* Hoverkleur */
+            background-color: rgba(0, 119, 190, 0.2);
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 60px 0;
+        }
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #007BFF; /* Blauwe rand */
+        }
+        .or-divider::before {
+            margin-right: 10px;
+        }
+        .or-divider::after {
+            margin-left: 10px;
+        }
+        .copy-message {
+            margin-top: 30px;
+        }
+        .copy-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: 1px solid #007BFF; /* Blauwe rand */
+            background-color: transparent;
+            color: #007BFF; /* Blauwe kleur */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .copy-button:hover {
+            background-color: rgba(0, 119, 190, 0.1);
+            color: white;
+        }
+        .copy-status {
+            margin-top: 10px;
+            color: #007BFF; /* Blauwe kleur */
+        }
+        .copyright {
+            margin-top: 40px;
+            color: darkgray;
+            font-size: 0.8em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="header-container">
+            <div class="header" translate="no"><strong>G-Z</strong></div>
+        </div>
+    </a>
 
+    <div class="divider"></div>
+
+    <div class="content">
+        <h1>Deel GZ</h1>
+        <div class="short-divider"></div>
+        <p class="social-message">Laten we ontdekken wie we zijn en hoe we tot deze wereld behoren! Naast vermaak laten we meer leren over onze generatie:</p>
+
+        <div class="social-icons">
+            <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('Facebook')">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=Word%20lid%20van%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20met%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Wees%20deel%20van%20dit%20unieke%20avontuur!%20🌟%20https://www.g-z.online" target="_blank" class="icon" onclick="share('WhatsApp')">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://telegram.me/share/url?url=https://www.g-z.online&text=Word%20lid%20van%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20met%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Wees%20deel%20van%20dit%20unieke%20avontuur!%20🌟" target="_blank" class="icon" onclick="share('Telegram')">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('Twitter')">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('WeChat')">
+                <i class="fab fa-weixin"></i>
+            </a>
+        </div>
+
+        <div class="or-divider">
+            <span style="color: #007BFF;">Of</span> <!-- Blauwe kleur -->
+        </div>
+
+        <p class="copy-message">Kopieer de deel link:</p>
+        <button class="copy-button" onclick="copyLink()">Kopiëren</button>
+        <p class="copy-status" id="copyStatus"></p>
+    </div>
+
+    <div class="copyright">
+        &copy; 2025 <span translate="no">G-Z</span>. Alle rechten voorbehouden.
+    </div>
+
+    <script>
+        const shareText = "Word lid van G-Z! Laten we samen de fascinerende geheimen van onze generatie ontdekken, met opwindende ontdekkingen en vermakelijke momenten. Wees deel van dit unieke avontuur! 🌟";
+        const shareLink = "https://www.g-z.online";
+
+        function copyLink() {
+            navigator.clipboard.writeText(shareLink).then(() => {
+                document.getElementById("copyStatus").innerText = "De volgende deel link is gekopieerd naar uw klembord: " + shareLink;
+            }).catch(err => {
+                console.error("Fout bij het kopiëren van de tekst: ", err);
+                document.getElementById("copyStatus").innerText = "Fout bij het kopiëren van de tekst.";
+            });
+        }
+
+        function share(platform) {
+            let url;
+            switch (platform) {
+                case 'Facebook':
+                    url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareLink)}&quote=${encodeURIComponent(shareText)}`;
+                    break;
+                case 'WeChat':
+                    alert("Delen op WeChat gebeurt meestal via de app.");
+                    return;
+                case 'Twitter':
+                    url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareLink)}&text=${encodeURIComponent(shareText)}`;
+                    break;
+                case 'WhatsApp':
+                    url = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}%20${encodeURIComponent(shareLink)}`;
+                    break;
+                case 'Telegram':
+                    url = `https://telegram.me/share/url?url=${encodeURIComponent(shareLink)}&text=${encodeURIComponent(shareText)}`;
+                    break;
+            }
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
