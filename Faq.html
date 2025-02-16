@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Lichte achtergrondkleur */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Tekstkleur */
+            font-family: 'Roboto', Arial, sans-serif; /* Gebruik een vergelijkbaar lettertype */
+        }
+        header {
+            background-color: #ffffff; /* Witte achtergrond */
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Licht schaduw */
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.2em; /* Aangepaste lettergrootte */
+            font-family: 'Billabong', cursive;
+            color: #007BFF; /* Blauwe kleur */
+        }
+        .logo-genz {
+            border: 1.5px solid #007BFF; /* Blauwe rand */
+            padding: 3px 6px; /* Verminder de padding */
+            display: inline-block;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+        .faq-button {
+            color: #007BFF; /* Blauwe kleur */
+            font-size: 0.9em; /* Verminderde lettergrootte */
+            padding: 3px 6px; /* Verminder de padding */
+            border: 1px solid #007BFF; /* Blauwe rand */
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            background-color: transparent; /* Transparante achtergrond */
+            display: flex;
+            align-items: center; 
+        }
+        .divider {
+            height: 1px;
+            background-color: #007BFF; /* Blauwe rand */
+            width: 100%;
+            margin-top: 0; /* Verwijder de bovenmarge */
+        }
+        .divider-text {
+            text-align: center;
+            color: #333; /* Tekstkleur */
+            font-size: 0.9em;
+            margin: 10px 0; 
+        }
+        .faq-content {
+            padding: 10px 20px; /* Verminder de bovenpadding */
+            font-size: 0.85em;
+        }
+        .faq-content h2 {
+            font-size: 1.2em; /* Verminderde grootte voor FAQ-titels */
+        }
+        footer {
+            text-align: center;
+            color: #333; /* Tekstkleur */
+            margin: 20px 0;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1 class="logo-genz" translate="no">GZ</h1>
+    </a>
+    <div style="display: flex; align-items: center;">
+        <div class="faq-button">FAQ</div>
+    </div>
+</header>
+
+<div class="divider"></div>
+<div class="divider-text">FAQ - Veelgestelde Vragen</div>
+<div class="divider"></div>
+
+<div class="faq-content">
+    <h2>1. Wat is GZ en hoe gebruik je het?</h2>
+    <p>G-Z is een volledig gratis webapplicatie waarmee gebruikers hun geboortedatum, geboorteland en geslacht kunnen indienen zonder registratie. Het is ontworpen om wereldwijde en nationale statistieken over geboorten te genereren, waaronder:</p>
+    <ul>
+        <li>Geboorten per dag, maand en jaar.</li>
+        <li>Verdeling naar land, geslacht en leeftijd.</li>
+    </ul>
+    <p>Het belangrijkste doel is om toegankelijke demografische gegevens te bieden voor een beter begrip van wereldwijde bevolkingstrends.</p>
+
+    <h2>2. Zijn mijn gegevens anoniem?</h2>
+    <p>Ja, uw gegevens zijn volledig anoniem. We hebben G-Z ontworpen om te garanderen:</p>
+    <ul>
+        <li>Geen enkele data kan aan een individuele gebruiker worden gekoppeld.</li>
+        <li>We verzamelen geen informatie die kan identificeren wie wat heeft ingediend. Maak je geen zorgen, je identiteit is beschermd en je gegevens worden meteen geaggregeerd.</li>
+    </ul>
+
+    <h2>3. Hoe kan ik weten of mijn gegevens zijn verzonden?</h2>
+    <p>Wanneer uw gegevens zijn verzonden:</p>
+    <ul>
+        <li>De kleur van de verzendknop verandert: oranje tijdens het verzenden en groen na een succesvolle verzending.</li>
+        <li>De tekst op de knop verandert van "Verzend" naar "Verzonden".</li>
+    </ul>
+    <p>Deze indicatoren bevestigen dat uw gegevens in overweging zijn genomen.</p>
+
+    <h2>4. Kan ik mijn inzendingen wijzigen of verwijderen?</h2>
+    <p>Ja, je hebt de mogelijkheid om je gegevens onmiddellijk na verzending te verwijderen. Hier is hoe:</p>
+    <ul>
+        <li>Na verzending verschijnt er een resetpictogram.</li>
+        <li>Door op dit pictogram te klikken, worden je gegevens volledig van onze servers verwijderd.</li>
+    </ul>
+    <p>Echter, zodra je de webapp sluit of de sessie verstrijkt, worden de gegevens onherroepelijk anoniem gemaakt en kunnen ze niet meer worden gewijzigd of verwijderd. Voor meer informatie, zie onze <a href="Confidentialité.html">Privacybeleid '5'</a>.</p>
+
+    <h2>5. Wat gebeurt er als ik foutieve informatie geef?</h2>
+    <p>We moedigen je aan om nauwkeurige en geverifieerde informatie in te dienen om de kwaliteit van de statistieken te waarborgen. Als je een fout opmerkt na verzending:</p>
+    <ul>
+        <li>Gebruik het resetpictogram om je gegevens te verwijderen.</li>
+        <li>Daarna kun je de gecorrigeerde informatie indienen.</li>
+    </ul>
+
+    <h2>6. Waarom zou ik GZ ondersteunen?</h2>
+    <p>Hoewel GZ gratis is, hebben we je steun nodig om:</p>
+    <ul>
+        <li>De kosten voor servers en infrastructuur te dekken.</li>
+        <li>Diepere analyses en toekomstige projecten te financieren die iedereen ten goede komen.</li>
+        <li>De voortdurende verbetering van de applicatie en zijn functies te waarborgen.</li>
+    </ul>
+    <p>Je kunt onze missie ondersteunen via PayPal of andere donatiemethoden.</p>
+
+    <h2>7. Waarom GZ volgen op sociale media?</h2>
+    <p>Door ons op sociale media te volgen, kun je:</p>
+    <ul>
+        <li>Op de hoogte blijven van nieuwe analyses en demografische trends.</li>
+        <li>Regelmatige updates over onze wereldwijde statistieken ontdekken.</li>
+        <li>Deelname aan educatieve discussies over wereldwijde bevolkingskwesties.</li>
+    </ul>
+    <p>Bovendien delen we interessante informatie op basis van onze statistieken en houden we je op de hoogte van onze nieuwe projecten.</p>
+</div>
+
+<footer>
+    <p>©️ 2025 GZ</p>
+</footer>
+</body>
+</html>
