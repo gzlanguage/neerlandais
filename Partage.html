@@ -25,13 +25,13 @@
             font-family: 'Billabong', cursive;
             color: #007BFF; /* Blauwe kleur */
             border: 1.5px solid #007BFF; /* Blauwe rand */
-            padding: 5px 10px;
+            padding: 4px;
             display: inline-block;
-            border-radius: 10px; /* Afgeronde hoeken */
+            border-radius: 12px; /* Afgeronde hoeken */
         }
         .divider {
             height: 1px;
-            background-color: #007BFF; /* Randkleur */
+            background-color: #007BFF; /* Kleur van de scheidingslijn */
             width: 100%;
             margin: 5px 0;
         }
@@ -63,13 +63,13 @@
             color: #007BFF; /* Blauwe kleur */
             transition: color 0.3s;
             border: 1px solid #007BFF; /* Blauwe rand */
-            border-radius: 3px;
+            border-radius: 10px;
             padding: 8px; 
             background-color: rgba(0, 119, 190, 0.1); /* Lichte achtergrond */
             display: inline-block;
         }
         .icon:hover {
-            color: #005f8d; /* Hoverkleur */
+            color: #005f8d; /* Kleur bij hover */
             background-color: rgba(0, 119, 190, 0.2);
         }
         .or-divider {
@@ -95,9 +95,10 @@
         }
         .copy-button {
             margin-top: 10px;
-            padding: 10px 20px;
+            padding: 10px 17px;
             border: 1px solid #007BFF; /* Blauwe rand */
-            background-color: transparent;
+            border-radius: 13px;
+            background-color: rgba(0, 119, 190, 0.1); /* Lichte achtergrond */
             color: #007BFF; /* Blauwe kleur */
             cursor: pointer;
             font-size: 16px;
@@ -111,12 +112,7 @@
             margin-top: 10px;
             color: #007BFF; /* Blauwe kleur */
         }
-        .copyright {
-            margin-top: 40px;
-            color: darkgray;
-            font-size: 0.8em;
-            text-align: center;
-        }
+        
     </style>
 </head>
 <body>
@@ -129,18 +125,18 @@
     <div class="divider"></div>
 
     <div class="content">
-        <h1>Deel GZ</h1>
+        <h1>Deel G-Z</h1>
         <div class="short-divider"></div>
-        <p class="social-message">Laten we ontdekken wie we zijn en hoe we tot deze wereld behoren! Naast vermaak laten we meer leren over onze generatie:</p>
+        <p class="social-message">Laten we ontdekken wie we zijn en hoe we tot de wereld behoren! Naast vermaak, laten we meer leren over onze generaties:</p>
 
         <div class="social-icons">
             <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('Facebook')">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://api.whatsapp.com/send?text=Word%20lid%20van%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20met%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Wees%20deel%20van%20dit%20unieke%20avontuur!%20🌟%20https://www.g-z.online" target="_blank" class="icon" onclick="share('WhatsApp')">
+            <a href="https://api.whatsapp.com/send?text=Sluit%20je%20aan%20bij%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20tussen%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Maak%20deel%20uit%20van%20dit%20unieke%20avontuur!%20🌟%20https://www.g-z.online" target="_blank" class="icon" onclick="share('WhatsApp')">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://telegram.me/share/url?url=https://www.g-z.online&text=Word%20lid%20van%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20met%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Wees%20deel%20van%20dit%20unieke%20avontuur!%20🌟" target="_blank" class="icon" onclick="share('Telegram')">
+            <a href="https://telegram.me/share/url?url=https://www.g-z.online&text=Sluit%20je%20aan%20bij%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20tussen%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Maak%20deel%20uit%20van%20dit%20unieke%20avontuur!%20🌟" target="_blank" class="icon" onclick="share('Telegram')">
                 <i class="fab fa-telegram"></i>
             </a>
             <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('Twitter')">
@@ -160,12 +156,9 @@
         <p class="copy-status" id="copyStatus"></p>
     </div>
 
-    <div class="copyright">
-        &copy; 2025 <span translate="no">G-Z</span>. Alle rechten voorbehouden.
-    </div>
-
+    
     <script>
-        const shareText = "Word lid van G-Z! Laten we samen de fascinerende geheimen van onze generatie ontdekken, met opwindende ontdekkingen en vermakelijke momenten. Wees deel van dit unieke avontuur! 🌟";
+        const shareText = "Sluit je aan bij G-Z! Samen ontdekken we de fascinerende geheimen van onze generatie, tussen opwindende ontdekkingen en vermakelijke momenten. Maak deel uit van dit unieke avontuur! 🌟";
         const shareLink = "https://www.g-z.online";
 
         function copyLink() {
