@@ -3,202 +3,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title translate="no">G-Z</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>GZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-color: #f5f5f5; /* Lichte achtergrondkleur */
-            color: var(--text-color);
-            font-family: 'Roboto', Arial, sans-serif; /* Gebruik een vergelijkbaar lettertype */
-            padding: 20px;
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        .header-container {
+
+        header {
+            background-color: #ffffff;
+            padding: 10px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 5px;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            font-size: 1.8em;
+
+        h1 {
+            margin: 0;
+            font-size: 1.4em;
             font-family: 'Billabong', cursive;
-            color: #007BFF; /* Blauwe kleur */
-            border: 1.5px solid #007BFF; /* Blauwe rand */
-            padding: 5px 10px;
-            display: inline-block;
-            border-radius: 10px; /* Afgeronde hoeken */
+            color: #007BFF;
+            border: 2px solid #007BFF;
+            padding: 3px;
+            border-radius: 10px;
         }
+
+        .copyright-icon {
+            font-size: 0.6em;
+            color: #007BFF;
+            margin: 0 10px;
+        }
+
         .divider {
             height: 1px;
-            background-color: #007BFF; /* Randkleur */
+            background-color: #007BFF;
             width: 100%;
-            margin: 5px 0;
+            margin: 1.6px 0;
         }
-        .short-divider {
-            width: 50%;
-            margin: 10px auto;
-        }
-        .content {
-            text-align: center;
-            margin-top: 60px;
-        }
-        h1, h2 {
-            margin-bottom: 5px;
-            font-size: 2em;
-            text-decoration: underline;
-            color: #007BFF; /* Blauwe kleur */
-        }
-        .social-message {
-            margin-top: 30px;
-        }
-        .social-icons {
+
+        .button-container {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Ruimte tussen de iconen */
-            margin-top: 20px;
+            margin-top: 5px;
+            padding: 5px 0;
+            overflow-x: auto;
+            white-space: nowrap;
         }
-        .icon {
-            font-size: 30px; 
-            color: #007BFF; /* Blauwe kleur */
-            transition: color 0.3s;
-            border: 1px solid #007BFF; /* Blauwe rand */
-            border-radius: 3px;
-            padding: 8px; 
-            background-color: rgba(0, 119, 190, 0.1); /* Lichte achtergrond */
-            display: inline-block;
-        }
-        .icon:hover {
-            color: #005f8d; /* Hoverkleur */
-            background-color: rgba(0, 119, 190, 0.2);
-        }
-        .or-divider {
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 13px;
+            margin: 0 5px;
+            font-size: 0.8em;
+            cursor: pointer;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            margin: 60px 0;
+            transition: background-color 0.3s;
         }
-        .or-divider::before,
-        .or-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background-color: #007BFF; /* Blauwe rand */
+
+        .button:hover {
+            background-color: #0056b3;
         }
-        .or-divider::before {
-            margin-right: 10px;
-        }
-        .or-divider::after {
-            margin-left: 10px;
-        }
-        .copy-message {
-            margin-top: 30px;
-        }
-        .copy-button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            border: 1px solid #007BFF; /* Blauwe rand */
-            background-color: transparent;
-            color: #007BFF; /* Blauwe kleur */
+
+        .share-button {
+            background-color: #ffffff;
+            border: 1px solid #007BFF;
+            border-radius: 9px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s, color 0.3s;
+            margin-left: 10px;
+            padding: 5px;
+            color: #007BFF;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
         }
-        .copy-button:hover {
-            background-color: rgba(0, 119, 190, 0.1);
-            color: white;
+
+        .share-button:hover {
+            background-color: #e9f5ff;
         }
-        .copy-status {
-            margin-top: 10px;
-            color: #007BFF; /* Blauwe kleur */
+
+        .category-select, .country-select {
+            width: 100%;
+            padding: 5px;
+            margin: 4px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            border-top: 3px solid #007BFF;
         }
-        .copyright {
-            margin-top: 40px;
-            color: darkgray;
-            font-size: 0.8em;
+
+        .dashboard {
+            max-width: 800px;
+            margin: auto;
+            padding: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            overflow: auto;
+            max-height: 700px;
+            overflow-y: scroll;
+        }
+
+        .card {
+            background: white;
+            padding: 6px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
+            color: inherit;
+            border: 1px solid #007BFF;
+            transition: background 0.3s;
+        }
+
+        .small-card { height: 50px; }
+        .card:hover {
+            transform: translateY(-2px);
+            background: #e9f5ff;
+        }
+
+        .title { color: #666; font-size: 0.8rem; margin-bottom: 9px; }
+        .value { font-size: 1rem; font-weight: bold; color: #007BFF; }
+
+        @media (max-width: 500px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+            .title { font-size: 0.6rem; }
+            .value { font-size: 0.8rem; }
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 34% auto; 
+            padding: 14px;
+            border: 2px solid #007BFF; 
+            border-radius: 40px; 
+            width: 80%; 
+            max-width: 290px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .close {
+            color: red; 
+            font-size: 20px; 
+            font-weight: bold;
+            display: block; 
+            text-align: center; 
+            margin-bottom: 10px; 
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: darkred; 
+        }
+
+        .modal p {
+            color: #333; 
+            font-size: 0.8em; 
+            text-align: center; 
+        }
+
+        .support-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 12px; 
+            cursor: pointer;
+            font-size: 0.8em; 
+            margin-top: 10px; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s;
+        }
+
+        .support-button:hover {
+            background-color: #0056b3;
         }
     </style>
-</head>
-<body>
-    <a href="index.html" style="text-decoration: none; color: inherit;">
-        <div class="header-container">
-            <div class="header" translate="no"><strong>G-Z</strong></div>
-        </div>
-    </a>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-    <div class="divider"></div>
+        const firebaseConfig = {
+  apiKey: "AIzaSyCrPKQOqw4zciASa_5PbI_etfkvrBaDPDI",
+  authDomain: "genz-abb36.firebaseapp.com",
+  databaseURL: "https://genz-abb36-default-rtdb.firebaseio.com",
+  projectId: "genz-abb36",
+  storageBucket: "genz-abb36.firebasestorage.app",
+  messagingSenderId: "405021535683",
+  appId: "1:405021535683:web:ee5a28fde27f5558046176",
+  measurementId: "G-XZNQND2J00"
+};
 
-    <div class="content">
-        <h1>Deel GZ</h1>
-        <div class="short-divider"></div>
-        <p class="social-message">Laten we ontdekken wie we zijn en hoe we tot deze wereld behoren! Naast vermaak laten we meer leren over onze generatie:</p>
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const auth = getAuth();
 
-        <div class="social-icons">
-            <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('Facebook')">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?text=Word%20lid%20van%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20met%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Wees%20deel%20van%20dit%20unieke%20avontuur!%20🌟%20https://www.g-z.online" target="_blank" class="icon" onclick="share('WhatsApp')">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://telegram.me/share/url?url=https://www.g-z.online&text=Word%20lid%20van%20G-Z%20!%20Laten%20we%20samen%20de%20fascinerende%20geheimen%20van%20onze%20generatie%20ontdekken,%20met%20opwindende%20ontdekkingen%20en%20vermakelijke%20momenten.%20Wees%20deel%20van%20dit%20unieke%20avontuur!%20🌟" target="_blank" class="icon" onclick="share('Telegram')">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('Twitter')">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.g-z.online" target="_blank" class="icon" onclick="share('WeChat')">
-                <i class="fab fa-weixin"></i>
-            </a>
-        </div>
+        let allData = {}; // Opslaan van globale gegevens
 
-        <div class="or-divider">
-            <span style="color: #007BFF;">Of</span> <!-- Blauwe kleur -->
-        </div>
-
-        <p class="copy-message">Kopieer de deel link:</p>
-        <button class="copy-button" onclick="copyLink()">Kopiëren</button>
-        <p class="copy-status" id="copyStatus"></p>
-    </div>
-
-    <div class="copyright">
-        &copy; 2025 <span translate="no">G-Z</span>. Alle rechten voorbehouden.
-    </div>
-
-    <script>
-        const shareText = "Word lid van G-Z! Laten we samen de fascinerende geheimen van onze generatie ontdekken, met opwindende ontdekkingen en vermakelijke momenten. Wees deel van dit unieke avontuur! 🌟";
-        const shareLink = "https://www.g-z.online";
-
-        function copyLink() {
-            navigator.clipboard.writeText(shareLink).then(() => {
-                document.getElementById("copyStatus").innerText = "De volgende deel link is gekopieerd naar uw klembord: " + shareLink;
-            }).catch(err => {
-                console.error("Fout bij het kopiëren van de tekst: ", err);
-                document.getElementById("copyStatus").innerText = "Fout bij het kopiëren van de tekst.";
+        function fetchData() {
+            const birthdatesRef = ref(db, 'birthdates');
+            onValue(birthdatesRef, (snapshot) => {
+                allData = snapshot.val() || {}; // Opslaan van gegevens in een globale variabele
+                console.log(allData); // Toon de opgehaalde gegevens
+                updateCountries(); // Update de beschikbare landen
+                updateCards(); // Update de kaarten met de gegevens
             });
         }
 
-        function share(platform) {
-            let url;
-            switch (platform) {
-                case 'Facebook':
-                    url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareLink)}&quote=${encodeURIComponent(shareText)}`;
-                    break;
-                case 'WeChat':
-                    alert("Delen op WeChat gebeurt meestal via de app.");
-                    return;
-                case 'Twitter':
-                    url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareLink)}&text=${encodeURIComponent(shareText)}`;
-                    break;
-                case 'WhatsApp':
-                    url = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}%20${encodeURIComponent(shareLink)}`;
-                    break;
-                case 'Telegram':
-                    url = `https://telegram.me/share/url?url=${encodeURIComponent(shareLink)}&text=${encodeURIComponent(shareText)}`;
-                    break;
-            }
-            window.open(url, '_blank');
+        function updateCountries() {
+            const countrySelect = document.getElementById('countrySelect');
+            const countries = new Set();
+
+            // Unieke landen ophalen uit de gegevens
+            Object.keys(allData).forEach(userId => {
+                const userData = allData[userId];
+                countries.add(userData.country); // Zorg ervoor dat 'country' een eigenschap van userData is
+            });
+
+            // Vul de landkeuzeselectie
+            countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                countrySelect.appendChild(option);
+            });
         }
+
+        function calculateAge(birthDate) {
+            const today = new Date();
+            const birth = new Date(birthDate);
+            let age = today.getFullYear() - birth.getFullYear();
+            const monthDiff = today.getMonth() - birth.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        function updateCards() {
+            const grid = document.getElementById('grid');
+            grid.innerHTML = ''; // Huidige inhoud wissen
+
+            const selectedCountry = document.getElementById('countrySelect').value;
+            const selectedCategory = document.getElementById('categorySelect').value;
+
+            if (Object.keys(allData).length === 0) {
+                grid.innerHTML = '<p>Geen gegevens gevonden.</p>';
+                return;
+            }
+
+            const counts = {};
+
+            // Telllen per categorie
+            Object.keys(allData).forEach(userId => {
+                const userData = allData[userId];
+                if (userData.country === selectedCountry || selectedCountry === '') {
+                    let key;
+                    if (selectedCategory === 'daily') {
+                        key = new Date(userData.date).toLocaleDateString('nl-NL', { weekday: 'long' });
+                    } else if (selectedCategory === 'monthly') {
+                        key = new Date(userData.date).toLocaleDateString('nl-NL', { month: 'long' });
+                    } else if (selectedCategory === 'yearly') {
+                        key = new Date(userData.date).getFullYear();
+                    } else if (selectedCategory === 'gender') {
+                        key = userData.gender; // Voor de categorie 'gender'
+                    } else if (selectedCategory === 'age') {
+                        key = calculateAge(userData.date); // Leeftijd berekenen
+                    } else if (selectedCategory === 'population') {
+                        key = userData.country; // Voor de bevolking, gebruik het land
+                    }
+
+                    counts[key] = (counts[key] || 0) + 1;
+                }
+            });
+
+            // Toon de kaarten
+            Object.keys(counts).forEach(key => {
+                const card = document.createElement('div');
+                card.className = 'card small-card';
+                card.innerHTML = `<div class="title">${key}</div><div class="value">${counts[key]}</div>`;
+                grid.appendChild(card);
+            });
+
+            // Als er geen gegevens zijn gevonden
+            if (grid.innerHTML === '') {
+                grid.innerHTML = '<p>Geen gegevens gevonden.</p>';
+            }
+        }
+
+        // Debounce functie
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const categorySelect = document.getElementById('categorySelect');
+            const countrySelect = document.getElementById('countrySelect');
+
+            countrySelect.addEventListener('change', debounce(updateCards, 300));
+            categorySelect.addEventListener('change', debounce(updateCards, 300));
+            fetchData(); // Laad de gegevens bij opstarten
+
+            // Open de ondersteuningsmodal
+            document.getElementById('supportBtn').onclick = function() {
+                document.getElementById('supportModal').style.display = 'block';
+            };
+
+            // Open de FAQ-modal
+            document.getElementById('faqBtn').onclick = function() {
+                document.getElementById('faqModal').style.display = 'block';
+            };
+
+            // Sluit de modal
+            document.querySelectorAll('.close').forEach(closeButton => {
+                closeButton.onclick = function() {
+                    this.closest('.modal').style.display = 'none';
+                };
+            });
+
+            // Sluit de modal door buiten te klikken
+            window.onclick = function(event) {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            };
+
+            // Open de PayPal-link
+            document.getElementById('paypalBtn').onclick = function() {
+                window.location.href = 'https://www.paypal.com/ncp/payment/QN7HEGCSRYJKA';
+            };
+
+            // Verander de kleur van de ondersteuningsknop elke seconde
+            const supportButton = document.getElementById('supportBtn');
+            let isGreenSupport = false;
+
+            setInterval(() => {
+                isGreenSupport = !isGreenSupport; // Wissel de kleur af
+                supportButton.style.backgroundColor = isGreenSupport ? 'green' : '#007BFF'; // Verander de kleur
+            }, 700);
+
+            // Verander de kleur van de PayPal-knop elke seconde
+            const paypalButton = document.getElementById('paypalBtn');
+            let isGreenPaypal = false;
+
+            setInterval(() => {
+                isGreenPaypal = !isGreenPaypal; // Wissel de kleur af
+                paypalButton.style.backgroundColor = isGreenPaypal ? 'green' : '#007BFF'; // Verander de kleur
+            }, 10000);
+        });
     </script>
+</head>
+<body>
+
+<header>
+    <a href="index.html" style="text-decoration: none;">
+        <h1 translate="no">G-Z</h1>
+    </a>
+    <div class="copyright-icon">©️</div>
+    <a href="Partage.html">
+        <button class="share-button" aria-label="Delen">
+            <i class="fas fa-share-alt"></i>
+        </button>
+    </a>
+</header>
+
+<div class="divider"></div>
+
+<div class="button-container">
+    <button id="faqBtn" class="button" aria-label="Veelgestelde vragen">
+        <i class="fas fa-question-circle" style="margin-right: 2px;"></i> Vragen
+    </button>
+    <button id="supportBtn" class="button" aria-label="Ondersteuning" translate="no">
+        <i class="fas fa-hand-holding-heart" style="margin-right: 5px;"></i> Ondersteunen
+    </button>
+</div>
+
+<div class="divider"></div>
+
+<div class="dashboard">
+    <select class="country-select" aria-label="Selecteer een land" id="countrySelect">
+        <option value="">Alle landen</option>
+        <!-- Landopties worden dynamisch toegevoegd -->
+    </select>
+
+    <select class="category-select" aria-label="Selecteer een categorie" id="categorySelect">
+        <option value="daily">Geboorten per dag</option>
+        <option value="monthly">Geboorten per maand</option>
+        <option value="yearly">Geboorten per jaar</option>
+        <option value="gender">Geslacht</option>
+        <option value="age">Leeftijden</option>
+        <option value="population">Bevolking</option>
+    </select>
+
+    <div class="grid" id="grid">
+        <!-- De kaarten worden hier gegenereerd -->
+    </div>
+</div>
+
+<!-- Ondersteuningsmodal -->
+<div id="supportModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Bedankt voor het ondersteunen van G-Z! Elke steun telt. Dankzij uw hulp kunnen we dit spannende project blijven ontwikkelen, innovatieve analyses maken en gratis statistieken aan een wereldwijd publiek bieden.</p>
+        <button id="paypalBtn" class="support-button">Nu ondersteunen</button>
+    </div>
+</div>
+
+<!-- Veelgestelde vragen-modal -->
+<div id="faqModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        Statistieken worden automatisch bijgewerkt met elke indiening in de tabellen.
+    </div>
+</div>
 
 </body>
 </html>
